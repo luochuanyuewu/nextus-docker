@@ -1,0 +1,1 @@
+npx directus-migrator -s development -t production -c

@@ -1,0 +1,30 @@
+version: "3"
+services:
+  database:
+    container_name: ${DOCKER_DIRECTUS_DB_CONTAINER_NAME}
+    image: ${DOCKER_DIRECTUS_DB_IMAGE:-postgis/postgis}:${DOCKER_DIRECTUS_DB_VERSION:-13-master}
+    # Required when running on platform other than amd64, like Apple M1/M2:
+    # platform: linux/amd64
+    volumes:
+      - ${DOCKER_DIRECTUS_DB_FILES}:/var/lib/postgresql/data
+    networks:
+      - directus
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 5432:5432
+
+  cache:
+    container_name: ${DOCKER_DIRECTUS_REDIS_CONTAINER_NAME}
+    image: redis:6
+    networks:
+      - directus
+    ports:
+      - 6379:6379
+
+networks:
+  directus:
+    name: ${DOCKER_DIRECTUS_NETWORKNAME}
+    external: ${DOCKER_DIRECTUS_EXTERNAL_NETWORK}

@@ -1,0 +1,21 @@
+const config = {
+  environments: [
+    {
+      name: "development",
+      endpoint: "<development-url>",
+      accessToken: "<development_admin_token>",
+    },
+    {
+      name: "staging",
+      endpoint: "<staging-url>",
+      accessToken: "<staging_admin_token>",
+    },
+    {
+      name: "production",
+      endpoint: "<production-url>",
+      accessToken: "<production_admin_token>",
+      production: true,
+    },
+  ],
+};
+module.exports = config;

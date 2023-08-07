@@ -1,0 +1,8 @@
+.env
+node_modules
+data
+uploads
+backup/data.tar.gz
+backup/extensions.tar.gz
+backup/uploads.tar.gz
+directus-migrator.config.js
