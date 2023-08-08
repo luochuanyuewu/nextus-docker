@@ -42,6 +42,8 @@ docker compose down
 
 # Updating(更新)
 
+To avoid conflict, backup first!
+
 ```sh
 # updating repo to get latest schema.yml 更新仓库以获取最新的schema
 git pull origin main
@@ -62,7 +64,7 @@ In case you modified your schema in production envrionments.
 如果你在产品环境下修改了schema。
 
 ```sh
-docker compose exec directus node cli.js schema snapshot /directus/snapshots/schema.yml
+docker compose exec directus node cli.js schema snapshot /directus/snapshots/schema.yml --yes
 ```
 
 
@@ -70,7 +72,7 @@ docker compose exec directus node cli.js schema snapshot /directus/snapshots/sch
 
 
 ```sh
-# make sure scripts executable.
+# make sure scripts executable. 确保脚本有执行权限
 chmod +x backup.sh
 
 # run this
@@ -83,7 +85,7 @@ chmod +x backup.sh
 # Restore(还原)
 
 ```sh
-# make sure scripts executable.
+# make sure scripts executable. 确保脚本有执行权限
 chmod +x restore.sh
 
 # run this
@@ -91,3 +93,32 @@ chmod +x restore.sh
 
 # now your extensions, uploads and data are restored from backup folder.
 ```
+
+# Custom(自定义)
+
+Sometimes, you want adding more package to directus instance, all you have to do is making changes to Dockerfile and use docker-build.yml as your primary compose.
+
+有时候，你想要给directus实例安装更多的包，你只需要编辑修改提供的Dockerfile，并使用docker-build.yml作为你的编排文件即可。
+
+```sh
+# starting nextus backend 启动nextus后端
+docker compose -f docker-build.yml up -d
+
+# stoping nextus backend 关闭nextus后端
+docker compose -f docker-build.yml down
+
+```
+
+For more detailed guides, follow this [link](https://docs.directus.io/self-hosted/docker-guide.html#adding-packages-to-use-in-flows-scripts).
+
+更多细节请查看这个链接 [link](https://docs.directus.io/self-hosted/docker-guide.html#adding-packages-to-use-in-flows-scripts).
+
+# Troubleshooting(权限问题)
+
+Permission issuse(权限问题)
+
+```sh
+chmod +x startup.sh backup.sh restore.sh
+chmod -R 777 snapshots extensions uploads
+```
+

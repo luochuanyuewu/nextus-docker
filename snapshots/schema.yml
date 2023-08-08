@@ -13000,6 +13000,23 @@ fields:
       interface: input-rich-text-html
       note: null
       options:
+        extensions:
+          - characterCount
+          - editor
+          - focus
+          - highlight
+          - image
+          - link
+          - mark
+          - node
+          - placeholder
+          - subscript
+          - superscript
+          - table
+          - task
+          - textAlign
+          - typography
+          - underline
         toolbar:
           - blockquote
           - bold

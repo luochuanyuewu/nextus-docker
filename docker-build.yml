@@ -1,10 +1,15 @@
-version: '3'
+version: "3"
 include:
   - docker-dev.yml
 services:
   directus:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - DOCKER_DIRECTUS_VERSION=${DOCKER_DIRECTUS_VERSION}
     container_name: ${DOCKER_DIRECTUS_CONTAINER_NAME}
-    image: directus/directus:${DOCKER_DIRECTUS_VERSION}
+    image: nextus:${DOCKER_DIRECTUS_VERSION}
     ports:
       - 8055:8055
     volumes:
@@ -26,8 +31,7 @@ services:
     depends_on:
       - cache
       - database
-    entrypoint: [ "/bin/sh", "/directus/startup.sh" ]
-
+    entrypoint: ["/bin/sh", "/directus/startup.sh"]
 # networks:
 #   directus:
 #     name: ${DOCKER_DIRECTUS_NETWORKNAME}
