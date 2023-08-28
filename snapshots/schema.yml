@@ -13010,80 +13010,6 @@ fields:
       foreign_key_table: categories
       foreign_key_column: id
   - collection: posts
-    field: content
-    type: text
-    meta:
-      collection: posts
-      conditions: null
-      display: null
-      display_options: null
-      field: content
-      group: null
-      hidden: false
-      interface: input-rich-text-html
-      note: null
-      options:
-        extensions:
-          - characterCount
-          - editor
-          - focus
-          - highlight
-          - image
-          - link
-          - mark
-          - node
-          - placeholder
-          - subscript
-          - superscript
-          - table
-          - task
-          - textAlign
-          - typography
-          - underline
-        toolbar:
-          - blockquote
-          - bold
-          - bullist
-          - code
-          - customImage
-          - customLink
-          - customMedia
-          - fullscreen
-          - h1
-          - h2
-          - h3
-          - hr
-          - italic
-          - numlist
-          - redo
-          - removeformat
-          - underline
-          - undo
-      readonly: false
-      required: false
-      sort: 16
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: content
-      table: posts
-      data_type: text
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: posts
     field: date_created
     type: dateTime
     meta:
@@ -13499,89 +13425,14 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: posts
-    field: summary
-    type: text
-    meta:
-      collection: posts
-      conditions: null
-      display: null
-      display_options: null
-      field: summary
-      group: null
-      hidden: false
-      interface: input-multiline
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: 14
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: summary
-      table: posts
-      data_type: text
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: posts
-    field: title
-    type: string
-    meta:
-      collection: posts
-      conditions: null
-      display: null
-      display_options: null
-      field: title
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: 10
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: title
-      table: posts
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: posts
     field: translations
     type: alias
     meta:
       collection: posts
       conditions: null
       display: null
-      display_options: null
+      display_options:
+        userLanguage: true
       field: translations
       group: null
       hidden: false
