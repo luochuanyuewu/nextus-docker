@@ -1,5 +1,5 @@
 version: 1
-directus: 12.1.2
+directus: 12.1.3
 vendor: postgres
 collections:
   - collection: block_cardgroup
@@ -1223,6 +1223,29 @@ collections:
       unarchive_value: draft
     schema:
       name: posts
+  - collection: posts_translations
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: posts_translations
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: posts_translations
   - collection: projects
     meta:
       accountability: all
@@ -13552,6 +13575,30 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: posts
+    field: translations
+    type: alias
+    meta:
+      collection: posts
+      conditions: null
+      display: null
+      display_options: null
+      field: translations
+      group: null
+      hidden: false
+      interface: translations
+      note: null
+      options:
+        languageField: code
+      readonly: false
+      required: false
+      sort: 18
+      special:
+        - translations
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: posts
     field: user_created
     type: string
     meta:
@@ -13621,6 +13668,255 @@ fields:
       data_type: character varying
       default_value: null
       max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: posts_translations
+    field: content
+    type: text
+    meta:
+      collection: posts_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: content
+      group: null
+      hidden: false
+      interface: input-rich-text-html
+      note: null
+      options:
+        folder: null
+        toolbar:
+          - blockquote
+          - bold
+          - bullist
+          - code
+          - customImage
+          - customLink
+          - customMedia
+          - fullscreen
+          - h1
+          - h2
+          - h3
+          - hr
+          - italic
+          - numlist
+          - redo
+          - removeformat
+          - underline
+          - undo
+      readonly: false
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: content
+      table: posts_translations
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: posts_translations
+    field: id
+    type: integer
+    meta:
+      collection: posts_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: posts_translations
+      data_type: integer
+      default_value: nextval('posts_translations_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: posts_translations
+    field: languages_code
+    type: string
+    meta:
+      collection: posts_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: languages_code
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: languages_code
+      table: posts_translations
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: languages
+      foreign_key_column: code
+  - collection: posts_translations
+    field: posts_id
+    type: uuid
+    meta:
+      collection: posts_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: posts_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: posts_id
+      table: posts_translations
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: posts
+      foreign_key_column: id
+  - collection: posts_translations
+    field: summary
+    type: text
+    meta:
+      collection: posts_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: summary
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options:
+        trim: true
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: summary
+      table: posts_translations
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: posts_translations
+    field: title
+    type: string
+    meta:
+      collection: posts_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: posts_translations
+      data_type: character varying
+      default_value: null
+      max_length: 255
       numeric_precision: null
       numeric_scale: null
       is_nullable: true
@@ -17668,6 +17964,48 @@ relations:
       foreign_key_table: seo
       foreign_key_column: id
       constraint_name: posts_seo_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: posts_translations
+    field: languages_code
+    related_collection: languages
+    meta:
+      junction_field: posts_id
+      many_collection: posts_translations
+      many_field: languages_code
+      one_allowed_collections: null
+      one_collection: languages
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: posts_translations
+      column: languages_code
+      foreign_key_table: languages
+      foreign_key_column: code
+      constraint_name: posts_translations_languages_code_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: posts_translations
+    field: posts_id
+    related_collection: posts
+    meta:
+      junction_field: languages_code
+      many_collection: posts_translations
+      many_field: posts_id
+      one_allowed_collections: null
+      one_collection: posts
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: translations
+      sort_field: null
+    schema:
+      table: posts_translations
+      column: posts_id
+      foreign_key_table: posts
+      foreign_key_column: id
+      constraint_name: posts_translations_posts_id_foreign
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: projects
