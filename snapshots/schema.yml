@@ -1,5 +1,5 @@
 version: 1
-directus: 12.1.3
+directus: 13.0.0
 vendor: postgres
 collections:
   - collection: block_cardgroup
@@ -988,10 +988,10 @@ collections:
       collapse: open
       collection: languages
       color: null
-      display_template: null
+      display_template: '{{name}}'
       group: null
       hidden: false
-      icon: null
+      icon: language
       item_duplication_fields: null
       note: null
       preview_url: null
