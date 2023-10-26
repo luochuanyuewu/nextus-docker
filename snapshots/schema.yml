@@ -1,5 +1,5 @@
 version: 1
-directus: 13.0.0
+directus: 13.1.1
 vendor: postgres
 collections:
   - collection: block_cardgroup
@@ -19,7 +19,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 13
+      sort: 14
       sort_field: null
       translations:
         - language: en-US
@@ -92,7 +92,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 4
+      sort: 5
       sort_field: null
       translations:
         - language: en-US
@@ -142,7 +142,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 9
+      sort: 10
       sort_field: null
       translations:
         - language: en-US
@@ -169,7 +169,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 2
+      sort: 3
       sort_field: null
       translations:
         - language: en-US
@@ -179,6 +179,29 @@ collections:
       unarchive_value: null
     schema:
       name: block_faqs
+  - collection: block_features
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: archived
+      collapse: open
+      collection: block_features
+      color: '#FF99DD'
+      display_template: '{{title}}'
+      group: blocks
+      hidden: false
+      icon: checklist
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: draft
+    schema:
+      name: block_features
   - collection: block_form
     meta:
       accountability: all
@@ -196,7 +219,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 5
+      sort: 6
       sort_field: null
       translations:
         - language: en-US
@@ -223,7 +246,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 12
+      sort: 13
       sort_field: null
       translations:
         - language: en-US
@@ -300,7 +323,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 15
+      sort: 16
       sort_field: null
       translations:
         - language: en-US
@@ -327,7 +350,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 7
+      sort: 8
       sort_field: null
       translations:
         - language: en-US
@@ -377,7 +400,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 3
+      sort: 4
       sort_field: null
       translations:
         - language: en-US
@@ -404,7 +427,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 10
+      sort: 11
       sort_field: null
       translations:
         - language: en-US
@@ -431,7 +454,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 11
+      sort: 12
       sort_field: null
       translations:
         - language: en-US
@@ -481,7 +504,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 8
+      sort: 9
       sort_field: null
       translations:
         - language: en-US
@@ -508,7 +531,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 6
+      sort: 7
       sort_field: null
       translations:
         - language: en-US
@@ -558,7 +581,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 14
+      sort: 15
       sort_field: null
       translations:
         - language: en-US
@@ -904,6 +927,29 @@ collections:
       unarchive_value: draft
     schema:
       name: help_articles
+  - collection: help_articles_translations
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: help_articles_translations
+      color: null
+      display_template: null
+      group: help_articles
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: help_articles_translations
   - collection: help_collections
     meta:
       accountability: all
@@ -913,7 +959,7 @@ collections:
       collapse: open
       collection: help_collections
       color: '#2ECDA7'
-      display_template: null
+      display_template: '{{slug}}'
       group: help
       hidden: false
       icon: collections_bookmark
@@ -929,6 +975,31 @@ collections:
       unarchive_value: draft
     schema:
       name: help_collections
+  - collection: help_collections_translations
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: help_collections_translations
+      color: null
+      display_template: null
+      group: help_collections
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations:
+        - language: zh-CN
+          translation: 帮助合集_翻译
+      unarchive_value: null
+    schema:
+      name: help_collections_translations
   - collection: help_feedback
     meta:
       accountability: all
@@ -988,10 +1059,10 @@ collections:
       collapse: open
       collection: languages
       color: null
-      display_template: '{{name}}'
+      display_template: null
       group: null
       hidden: false
-      icon: language
+      icon: null
       item_duplication_fields: null
       note: null
       preview_url: null
@@ -1134,7 +1205,7 @@ collections:
       collapse: open
       collection: pages
       color: '#FF99DD'
-      display_template: '{{title}}'
+      display_template: '{{translations}}'
       group: content
       hidden: false
       icon: web_asset
@@ -1171,7 +1242,9 @@ collections:
       singleton: false
       sort: 1
       sort_field: null
-      translations: null
+      translations:
+        - language: zh-CN
+          translation: 页面_翻译
       unarchive_value: null
     schema:
       name: pages_translations
@@ -1233,14 +1306,14 @@ collections:
       collection: posts_translations
       color: null
       display_template: null
-      group: null
+      group: posts
       hidden: true
       icon: import_export
       item_duplication_fields: null
       note: null
       preview_url: null
       singleton: false
-      sort: null
+      sort: 1
       sort_field: null
       translations: null
       unarchive_value: null
@@ -1600,8 +1673,9 @@ fields:
             allowDuplicates: false
             enableSearchFilter: false
             enableLink: false
-      display: null
-      display_options: null
+      display: related-values
+      display_options:
+        template: '{{posts_id.slug}}'
       field: posts
       group: null
       hidden: true
@@ -1609,6 +1683,7 @@ fields:
       note: null
       options:
         enableLink: true
+        template: '{{posts_id.slug}}'
       readonly: false
       required: false
       sort: 5
@@ -2853,6 +2928,210 @@ fields:
     schema:
       name: title
       table: block_faqs
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: block_features
+    field: description
+    type: text
+    meta:
+      collection: block_features
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: block_features
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: block_features
+    field: features
+    type: json
+    meta:
+      collection: block_features
+      conditions: null
+      display: null
+      display_options: null
+      field: features
+      group: null
+      hidden: false
+      interface: list
+      note: null
+      options:
+        fields:
+          - field: title
+            name: title
+            type: string
+            meta:
+              field: title
+              type: string
+              required: true
+              interface: input
+          - field: description
+            name: description
+            type: text
+            meta:
+              field: description
+              type: text
+              required: true
+              interface: input-multiline
+          - field: show_link
+            name: show_link
+            type: boolean
+            meta:
+              field: show_link
+              width: half
+              type: boolean
+              interface: boolean
+              required: true
+          - field: new_tab
+            name: new_tab
+            type: boolean
+            meta:
+              field: new_tab
+              width: half
+              type: boolean
+              interface: boolean
+              required: false
+          - field: url
+            name: url
+            type: string
+            meta:
+              field: url
+              type: string
+              required: false
+              interface: input
+          - field: text
+            name: text
+            type: string
+            meta:
+              field: text
+              type: string
+              interface: input
+      readonly: false
+      required: false
+      sort: 5
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: features
+      table: block_features
+      data_type: json
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: block_features
+    field: id
+    type: uuid
+    meta:
+      collection: block_features
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: block_features
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: block_features
+    field: title
+    type: string
+    meta:
+      collection: block_features
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: block_features
       data_type: character varying
       default_value: null
       max_length: 255
@@ -5526,7 +5805,7 @@ fields:
       conditions: null
       display: related-values
       display_options:
-        template: '{{title}}'
+        template: '{{translations}}'
       field: featured_post
       group: null
       hidden: false
@@ -5537,7 +5816,7 @@ fields:
           _and:
             - status:
                 _eq: published
-        template: '{{title}}'
+        template: '{{translations}}'
       readonly: false
       required: false
       sort: 5
@@ -8924,56 +9203,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: help_articles
-    field: content
-    type: text
-    meta:
-      collection: help_articles
-      conditions: null
-      display: null
-      display_options: null
-      field: content
-      group: null
-      hidden: false
-      interface: input-rich-text-md
-      note: null
-      options:
-        toolbar:
-          - blockquote
-          - bold
-          - bullist
-          - code
-          - empty
-          - heading
-          - image
-          - italic
-          - link
-          - numlist
-          - strikethrough
-      readonly: false
-      required: false
-      sort: 13
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: content
-      table: help_articles
-      data_type: text
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: help_articles
     field: date_created
     type: timestamp
     meta:
@@ -9063,14 +9292,15 @@ fields:
       conditions: null
       display: related-values
       display_options:
-        template: '{{icon}} {{title}}'
+        template: ' {{translations}}'
       field: help_collection
       group: null
       hidden: false
       interface: select-dropdown-m2o
       note: null
       options:
-        template: '{{icon}} {{title}}'
+        filter: null
+        template: ' {{slug}}'
       readonly: false
       required: false
       sort: 9
@@ -9117,7 +9347,7 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: id
       table: help_articles
@@ -9139,17 +9369,30 @@ fields:
     type: uuid
     meta:
       collection: help_articles
-      conditions: null
+      conditions:
+        - name: IfArticle
+          rule:
+            _and:
+              - type:
+                  _eq: article
+          readonly: false
+          hidden: false
+          required: false
+          options:
+            enableCreate: false
+            enableSelect: true
+            template: '{{avatar}}{{first_name}}{{last_name}}'
       display: null
       display_options: null
       field: owner
       group: null
-      hidden: false
+      hidden: true
       interface: select-dropdown-m2o
       note: null
       options:
+        enableCreate: false
         template: '{{avatar}} {{first_name}} {{last_name}}'
-      readonly: false
+      readonly: true
       required: false
       sort: 12
       special:
@@ -9233,7 +9476,7 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: sort
       table: help_articles
@@ -9271,7 +9514,6 @@ fields:
             value: archived
             foreground: '#FFFFFF'
             background: var(--warning)
-        showAsDot: true
       field: status
       group: null
       hidden: false
@@ -9310,70 +9552,64 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: help_articles
-    field: summary
-    type: text
+    field: translations
+    type: alias
     meta:
       collection: help_articles
       conditions: null
-      display: null
-      display_options: null
-      field: summary
+      display: translations
+      display_options:
+        defaultLanguage: zh
+        languageField: code
+        template: '{{title}}'
+      field: translations
       group: null
       hidden: false
-      interface: input-multiline
+      interface: translations
       note: null
-      options: null
+      options:
+        languageField: code
       readonly: false
-      required: false
-      sort: 11
-      special: null
+      required: true
+      sort: 15
+      special:
+        - translations
       translations: null
       validation: null
       validation_message: null
       width: full
-    schema:
-      name: summary
-      table: help_articles
-      data_type: text
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
   - collection: help_articles
-    field: title
+    field: type
     type: string
     meta:
       collection: help_articles
       conditions: null
       display: null
       display_options: null
-      field: title
+      field: type
       group: null
       hidden: false
-      interface: input
+      interface: select-radio
       note: null
-      options: null
+      options:
+        choices:
+          - text: Group
+            value: group
+          - text: Article
+            value: article
       readonly: false
-      required: false
-      sort: 7
+      required: true
+      sort: 11
       special: null
       translations: null
       validation: null
       validation_message: null
       width: half
     schema:
-      name: title
+      name: type
       table: help_articles
       data_type: character varying
-      default_value: null
+      default_value: article
       max_length: 255
       numeric_precision: null
       numeric_scale: null
@@ -9465,46 +9701,40 @@ fields:
       has_auto_increment: false
       foreign_key_table: directus_users
       foreign_key_column: id
-  - collection: help_collections
-    field: articles
-    type: alias
-    meta:
-      collection: help_collections
-      conditions: null
-      display: related-values
-      display_options:
-        template: '{{title}}'
-      field: articles
-      group: null
-      hidden: false
-      interface: list-o2m
-      note: null
-      options:
-        enableLink: true
-        template: '{{title}}'
-      readonly: false
-      required: false
-      sort: 7
-      special:
-        - o2m
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: help_collections
-    field: description
+  - collection: help_articles_translations
+    field: content
     type: text
     meta:
-      collection: help_collections
+      collection: help_articles_translations
       conditions: null
       display: null
       display_options: null
-      field: description
+      field: content
       group: null
       hidden: false
-      interface: input-multiline
+      interface: input-rich-text-html
       note: null
-      options: null
+      options:
+        folder: null
+        toolbar:
+          - blockquote
+          - bold
+          - bullist
+          - code
+          - customImage
+          - customLink
+          - customMedia
+          - fullscreen
+          - h1
+          - h2
+          - h3
+          - hr
+          - italic
+          - numlist
+          - redo
+          - removeformat
+          - underline
+          - undo
       readonly: false
       required: false
       sort: 6
@@ -9512,10 +9742,10 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
-      name: description
-      table: help_collections
+      name: content
+      table: help_articles_translations
       data_type: text
       default_value: null
       max_length: null
@@ -9529,18 +9759,144 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: help_collections
-    field: icon
+  - collection: help_articles_translations
+    field: help_articles_id
+    type: uuid
+    meta:
+      collection: help_articles_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: help_articles_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: help_articles_id
+      table: help_articles_translations
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: help_articles
+      foreign_key_column: id
+  - collection: help_articles_translations
+    field: id
+    type: integer
+    meta:
+      collection: help_articles_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: help_articles_translations
+      data_type: integer
+      default_value: nextval('help_articles_translations_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: help_articles_translations
+    field: languages_code
     type: string
     meta:
-      collection: help_collections
+      collection: help_articles_translations
       conditions: null
-      display: icon
+      display: null
       display_options: null
-      field: icon
+      field: languages_code
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: languages_code
+      table: help_articles_translations
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: languages
+      foreign_key_column: code
+  - collection: help_articles_translations
+    field: summary
+    type: text
+    meta:
+      collection: help_articles_translations
+      conditions:
+        - name: IsArticle
+          rule:
+            _and:
+              - type:
+                  _eq: article
+          options:
+            trim: false
+            font: sans-serif
+            clear: false
+          readonly: false
+          required: false
+          hidden: false
+      display: null
+      display_options: null
+      field: summary
       group: null
       hidden: false
-      interface: select-icon
+      interface: input-multiline
       note: null
       options: null
       readonly: false
@@ -9550,10 +9906,48 @@ fields:
       translations: null
       validation: null
       validation_message: null
+      width: full
+    schema:
+      name: summary
+      table: help_articles_translations
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: help_articles_translations
+    field: title
+    type: string
+    meta:
+      collection: help_articles_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
       width: half
     schema:
-      name: icon
-      table: help_collections
+      name: title
+      table: help_articles_translations
       data_type: character varying
       default_value: null
       max_length: 255
@@ -9567,6 +9961,78 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: help_collections
+    field: articles
+    type: alias
+    meta:
+      collection: help_collections
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{translations}}'
+      field: articles
+      group: null
+      hidden: false
+      interface: list-o2m
+      note: null
+      options:
+        enableLink: true
+        fields:
+          - slug
+          - sort
+          - translations.title
+          - type
+        tableSpacing: compact
+        template: '{{translations}}'
+      readonly: false
+      required: false
+      sort: 6
+      special:
+        - o2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: help_collections
+    field: cover
+    type: uuid
+    meta:
+      collection: help_collections
+      conditions: null
+      display: image
+      display_options:
+        circle: true
+      field: cover
+      group: null
+      hidden: false
+      interface: file-image
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 4
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: cover
+      table: help_collections
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
   - collection: help_collections
     field: id
     type: uuid
@@ -9622,12 +10088,12 @@ fields:
       options: null
       readonly: false
       required: false
-      sort: 4
+      sort: 3
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
       name: slug
       table: help_collections
@@ -9683,17 +10149,158 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: help_collections
-    field: title
-    type: string
+    field: translations
+    type: alias
     meta:
       collection: help_collections
       conditions: null
-      display: null
-      display_options: null
-      field: title
+      display: translations
+      display_options:
+        defaultLanguage: null
+        languageField: code
+        template: '{{title}}'
+      field: translations
       group: null
       hidden: false
-      interface: input
+      interface: translations
+      note: null
+      options:
+        languageField: code
+      readonly: false
+      required: true
+      sort: 5
+      special:
+        - translations
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: help_collections_translations
+    field: description
+    type: text
+    meta:
+      collection: help_collections_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: description
+      table: help_collections_translations
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: help_collections_translations
+    field: help_collections_id
+    type: uuid
+    meta:
+      collection: help_collections_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: help_collections_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: help_collections_id
+      table: help_collections_translations
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: help_collections
+      foreign_key_column: id
+  - collection: help_collections_translations
+    field: id
+    type: integer
+    meta:
+      collection: help_collections_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: help_collections_translations
+      data_type: integer
+      default_value: nextval('help_collections_translations_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: help_collections_translations
+    field: languages_code
+    type: string
+    meta:
+      collection: help_collections_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: languages_code
+      group: null
+      hidden: true
+      interface: null
       note: null
       options: null
       readonly: false
@@ -9705,8 +10312,46 @@ fields:
       validation_message: null
       width: half
     schema:
+      name: languages_code
+      table: help_collections_translations
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: languages
+      foreign_key_column: code
+  - collection: help_collections_translations
+    field: title
+    type: string
+    meta:
+      collection: help_collections_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
       name: title
-      table: help_collections
+      table: help_collections_translations
       data_type: character varying
       default_value: null
       max_length: 255
@@ -12250,8 +12895,9 @@ fields:
     meta:
       collection: pages
       conditions: null
-      display: null
-      display_options: null
+      display: related-values
+      display_options:
+        template: '{{title}}'
       field: seo
       group: null
       hidden: false
@@ -12420,51 +13066,15 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: pages
-    field: title
-    type: string
-    meta:
-      collection: pages
-      conditions: null
-      display: null
-      display_options: null
-      field: title
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: 9
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: title
-      table: pages
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: pages
     field: translations
     type: alias
     meta:
       collection: pages
       conditions: null
-      display: null
-      display_options: null
+      display: translations
+      display_options:
+        languageField: code
+        template: '{{title}}'
       field: translations
       group: null
       hidden: false
@@ -13430,8 +14040,10 @@ fields:
     meta:
       collection: posts
       conditions: null
-      display: null
+      display: translations
       display_options:
+        languageField: code
+        template: '{{title}}'
         userLanguage: true
       field: translations
       group: null
@@ -13543,6 +14155,23 @@ fields:
       interface: input-rich-text-html
       note: null
       options:
+        extensions:
+          - characterCount
+          - editor
+          - focus
+          - highlight
+          - image
+          - link
+          - mark
+          - node
+          - placeholder
+          - subscript
+          - superscript
+          - table
+          - task
+          - textAlign
+          - typography
+          - underline
         folder: null
         toolbar:
           - blockquote
@@ -17327,6 +17956,111 @@ relations:
       constraint_name: help_articles_user_updated_foreign
       on_update: NO ACTION
       on_delete: NO ACTION
+  - collection: help_articles_translations
+    field: help_articles_id
+    related_collection: help_articles
+    meta:
+      junction_field: languages_code
+      many_collection: help_articles_translations
+      many_field: help_articles_id
+      one_allowed_collections: null
+      one_collection: help_articles
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: translations
+      sort_field: null
+    schema:
+      table: help_articles_translations
+      column: help_articles_id
+      foreign_key_table: help_articles
+      foreign_key_column: id
+      constraint_name: help_articles_translations_help_articles_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: help_articles_translations
+    field: languages_code
+    related_collection: languages
+    meta:
+      junction_field: help_articles_id
+      many_collection: help_articles_translations
+      many_field: languages_code
+      one_allowed_collections: null
+      one_collection: languages
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: help_articles_translations
+      column: languages_code
+      foreign_key_table: languages
+      foreign_key_column: code
+      constraint_name: help_articles_translations_languages_code_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: help_collections
+    field: cover
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: help_collections
+      many_field: cover
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: help_collections
+      column: cover
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: help_collections_cover_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: help_collections_translations
+    field: help_collections_id
+    related_collection: help_collections
+    meta:
+      junction_field: languages_code
+      many_collection: help_collections_translations
+      many_field: help_collections_id
+      one_allowed_collections: null
+      one_collection: help_collections
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: translations
+      sort_field: null
+    schema:
+      table: help_collections_translations
+      column: help_collections_id
+      foreign_key_table: help_collections
+      foreign_key_column: id
+      constraint_name: help_collections_translations_help_collections_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: help_collections_translations
+    field: languages_code
+    related_collection: languages
+    meta:
+      junction_field: help_collections_id
+      many_collection: help_collections_translations
+      many_field: languages_code
+      one_allowed_collections: null
+      one_collection: languages
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: help_collections_translations
+      column: languages_code
+      foreign_key_table: languages
+      foreign_key_column: code
+      constraint_name: help_collections_translations_languages_code_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
   - collection: help_feedback
     field: user_created
     related_collection: directus_users
@@ -17696,6 +18430,7 @@ relations:
         - block_columns
         - block_cta
         - block_faqs
+        - block_features
         - block_form
         - block_gallery
         - block_hero

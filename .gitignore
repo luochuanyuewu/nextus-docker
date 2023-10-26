@@ -5,4 +5,5 @@ uploads
 backup/data.tar.gz
 backup/extensions.tar.gz
 backup/uploads.tar.gz
+backup_local
 directus-migrator.config.js

@@ -9,7 +9,7 @@ services:
       args:
         - DOCKER_DIRECTUS_VERSION=${DOCKER_DIRECTUS_VERSION}
     container_name: ${DOCKER_DIRECTUS_CONTAINER_NAME}
-    image: nextus:${DOCKER_DIRECTUS_VERSION}
+    image: ${DOCKER_DIRECTUS_CUSTOM_IMAGE_NAME}:${DOCKER_DIRECTUS_VERSION}
     ports:
       - 8055:8055
     volumes:

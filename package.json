@@ -1,0 +1,29 @@
+{
+  "name": "nextus-directus",
+  "version": "1.0.0",
+  "description": "Nextus Directus backend.",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "directus bootstrap",
+    "schema:snapshot": "directus schema snapshot ./snapshots/schema.yml",
+    "schema:apply": "directus schema apply ./snapshots/schema.yml",
+    "start": "directus start",
+    "dev:ext": "cross-env NODE_ENV=production directus start",
+    "dev": "nodemon --legacy-watch --exec directus start",
+    "directus": "directus",
+    "docker:up": "docker compose -f docker-dev.yml up -d",
+    "docker:down": "docker compose -f docker-dev.yml down"
+  },
+  "keywords": [],
+  "author": "luochuanyuewu",
+  "dependencies": {
+    "directus": "10.6.3",
+    "directus-extension-api-docs": "^1.7.2",
+    "directus-extension-schema-management-module": "^1.5.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.0.1"
+  }
+}
