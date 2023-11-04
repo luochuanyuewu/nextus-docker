@@ -1428,7 +1428,7 @@ collections:
       color: null
       display_template: '{{og_image}}'
       group: config
-      hidden: true
+      hidden: false
       icon: saved_search
       item_duplication_fields: null
       note: null
@@ -7948,7 +7948,9 @@ fields:
         - alias
         - group
         - no-data
-      translations: null
+      translations:
+        - language: zh-CN
+          translation: 网站分析
       validation: null
       validation_message: null
       width: full
@@ -8004,7 +8006,7 @@ fields:
       interface: file-image
       note: null
       options:
-        folder: 38637388-36d5-46df-b8a0-ca6ffd6525ef
+        folder: null
       readonly: false
       required: false
       sort: 3
@@ -8226,7 +8228,9 @@ fields:
       required: false
       sort: 2
       special: null
-      translations: null
+      translations:
+        - language: zh-CN
+          translation: 网址
       validation: null
       validation_message: null
       width: full
@@ -8724,7 +8728,7 @@ fields:
       interface: file-image
       note: null
       options:
-        folder: 38637388-36d5-46df-b8a0-ca6ffd6525ef
+        folder: null
       readonly: false
       required: false
       sort: 1
@@ -9733,6 +9737,7 @@ fields:
           - numlist
           - redo
           - removeformat
+          - table
           - underline
           - undo
       readonly: false
@@ -11018,7 +11023,6 @@ fields:
             value: archived
             foreground: '#FFFFFF'
             background: '#A2B5CD'
-        showAsDot: true
       field: status
       group: null
       hidden: false
@@ -13310,6 +13314,48 @@ fields:
       foreign_key_table: pages
       foreign_key_column: id
   - collection: pages_translations
+    field: seo
+    type: uuid
+    meta:
+      collection: pages_translations
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{title}}'
+      field: seo
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableSelect: false
+        template: '{{title}}'
+      readonly: false
+      required: false
+      sort: 6
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: pages_translations
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: seo
+      foreign_key_column: id
+  - collection: pages_translations
     field: title
     type: string
     meta:
@@ -13860,7 +13906,6 @@ fields:
       interface: select-dropdown-m2o
       note: null
       options:
-        enableSelect: false
         template: '{{title}}'
       readonly: false
       required: false
@@ -14194,7 +14239,7 @@ fields:
           - undo
       readonly: false
       required: false
-      sort: 6
+      sort: 7
       special: null
       translations: null
       validation: null
@@ -14331,6 +14376,47 @@ fields:
       foreign_key_table: posts
       foreign_key_column: id
   - collection: posts_translations
+    field: seo
+    type: uuid
+    meta:
+      collection: posts_translations
+      conditions: null
+      display: null
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableSelect: false
+        template: '{{title}}'
+      readonly: false
+      required: false
+      sort: 8
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: posts_translations
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: seo
+      foreign_key_column: id
+  - collection: posts_translations
     field: summary
     type: text
     meta:
@@ -14347,7 +14433,7 @@ fields:
         trim: true
       readonly: false
       required: false
-      sort: 5
+      sort: 6
       special: null
       translations: null
       validation: null
@@ -14385,7 +14471,7 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 4
+      sort: 5
       special: null
       translations: null
       validation: null
@@ -18418,6 +18504,27 @@ relations:
       constraint_name: pages_translations_pages_id_foreign
       on_update: NO ACTION
       on_delete: SET NULL
+  - collection: pages_translations
+    field: seo
+    related_collection: seo
+    meta:
+      junction_field: null
+      many_collection: pages_translations
+      many_field: seo
+      one_allowed_collections: null
+      one_collection: seo
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: pages_translations
+      column: seo
+      foreign_key_table: seo
+      foreign_key_column: id
+      constraint_name: pages_translations_seo_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
   - collection: pages_translations_blocks
     field: item
     related_collection: null
@@ -18592,6 +18699,27 @@ relations:
       foreign_key_table: posts
       foreign_key_column: id
       constraint_name: posts_translations_posts_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: posts_translations
+    field: seo
+    related_collection: seo
+    meta:
+      junction_field: null
+      many_collection: posts_translations
+      many_field: seo
+      one_allowed_collections: null
+      one_collection: seo
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: posts_translations
+      column: seo
+      foreign_key_table: seo
+      foreign_key_column: id
+      constraint_name: posts_translations_seo_foreign
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: projects
