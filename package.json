@@ -17,8 +17,8 @@
   "keywords": [],
   "author": "luochuanyuewu",
   "dependencies": {
-    "directus": "10.6.3",
-    "directus-extension-api-docs": "^1.7.2",
+    "directus": "10.8.1",
+    "directus-extension-api-docs": "^1.7.5",
     "directus-extension-schema-management-module": "^1.5.0"
   },
   "license": "MIT",

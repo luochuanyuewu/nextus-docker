@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       directus:
-        specifier: 10.6.3
-        version: 10.6.3
+        specifier: 10.8.1
+        version: 10.8.1(vue@3.3.4)
       directus-extension-api-docs:
-        specifier: ^1.7.2
-        version: 1.7.2(express@4.18.2)
+        specifier: ^1.7.5
+        version: 1.7.5(express@4.18.2)
       directus-extension-schema-management-module:
         specifier: ^1.5.0
         version: 1.5.0
@@ -1285,6 +1285,7 @@ packages:
   /@azure/msal-browser@2.38.2:
     resolution: {integrity: sha512-71BeIn2we6LIgMplwCSaMq5zAwmalyJR3jFcVOZxNVfQ1saBRwOD+P77nLs5vrRCedVKTq8RMFhIOdpMLNno0A==}
     engines: {node: '>=0.8.0'}
+    deprecated: A newer major version of this library is available. Please upgrade to the latest available version.
     dependencies:
       '@azure/msal-common': 13.3.0
 
@@ -1299,6 +1300,7 @@ packages:
   /@azure/msal-node@1.18.3:
     resolution: {integrity: sha512-lI1OsxNbS/gxRD4548Wyj22Dk8kS7eGMwD9GlBZvQmFV8FJUXoXySL1BiNzDsHUE96/DS/DHmA+F73p1Dkcktg==}
     engines: {node: 10 || 12 || 14 || 16 || 18}
+    deprecated: A newer major version of this library is available. Please upgrade to the latest available version.
     dependencies:
       '@azure/msal-common': 13.3.0
       jsonwebtoken: 9.0.1
@@ -1364,34 +1366,35 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-  /@directus/api@13.1.1:
-    resolution: {integrity: sha512-w9gDyOzKplVo9m+bWiSTGYz+qZoYae62EFNlciEMWNhffwfhX1u2S1YXkmxZnqcgk0IEOVC86+Z3wxZ9J9h9/A==}
+  /@directus/api@14.1.1(vue@3.3.4):
+    resolution: {integrity: sha512-ouT/4fBHmYivEwcAPjxbLPigZfIi7sXmjva+v2+qz86IKyC090l9+j0NAODOF0mKkDIUnWnhzfZR0z9ENt5bgw==}
     engines: {node: '>=18.0.0'}
     dependencies:
       '@authenio/samlify-node-xmllint': 2.0.0(samlify@2.8.10)
       '@aws-sdk/client-ses': 3.332.0
-      '@directus/app': 10.9.0
-      '@directus/constants': 10.2.3
-      '@directus/errors': 0.0.2
-      '@directus/extensions-sdk': 10.1.11(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
-      '@directus/format-title': 10.0.0
-      '@directus/pressure': 1.0.10
-      '@directus/schema': 10.0.2(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
-      '@directus/specs': 10.2.0
-      '@directus/storage': 10.0.5
-      '@directus/storage-driver-azure': 10.0.11
-      '@directus/storage-driver-cloudinary': 10.0.11
-      '@directus/storage-driver-gcs': 10.0.11
-      '@directus/storage-driver-local': 10.0.11
-      '@directus/storage-driver-s3': 10.0.11
-      '@directus/storage-driver-supabase': 1.0.3
-      '@directus/utils': 10.0.11
-      '@directus/validation': 0.0.6
+      '@directus/app': 10.13.1
+      '@directus/constants': 11.0.1
+      '@directus/errors': 0.2.0
+      '@directus/extensions': 0.2.0(vue@3.3.4)
+      '@directus/extensions-sdk': 10.2.0(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
+      '@directus/format-title': 10.1.0
+      '@directus/pressure': 1.0.13(vue@3.3.4)
+      '@directus/schema': 11.0.0(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
+      '@directus/specs': 10.2.3
+      '@directus/storage': 10.0.7
+      '@directus/storage-driver-azure': 10.0.14(vue@3.3.4)
+      '@directus/storage-driver-cloudinary': 10.0.14(vue@3.3.4)
+      '@directus/storage-driver-gcs': 10.0.14(vue@3.3.4)
+      '@directus/storage-driver-local': 10.0.14(vue@3.3.4)
+      '@directus/storage-driver-s3': 10.0.14(vue@3.3.4)
+      '@directus/storage-driver-supabase': 1.0.6(vue@3.3.4)
+      '@directus/utils': 11.0.2(vue@3.3.4)
+      '@directus/validation': 0.0.9(vue@3.3.4)
       '@godaddy/terminus': 4.12.0
       '@rollup/plugin-alias': 5.0.0(rollup@3.22.0)
       '@rollup/plugin-node-resolve': 15.0.2(rollup@3.22.0)
       '@rollup/plugin-virtual': 3.0.1(rollup@3.22.0)
-      argon2: 0.30.3
+      argon2: 0.31.1
       async: 3.2.4
       axios: 1.4.0
       busboy: 1.6.0
@@ -1404,7 +1407,6 @@ packages:
       cookie-parser: 1.4.6
       cors: 2.8.5
       cron-parser: 4.8.1
-      csv-parser: 3.0.0
       date-fns: 2.30.0
       deep-diff: 1.0.2
       destroy: 1.2.0
@@ -1416,9 +1418,10 @@ packages:
       express: 4.18.2
       flat: 5.0.2
       fs-extra: 11.1.1
-      graphql: 16.6.0
-      graphql-compose: 9.0.10(graphql@16.6.0)
-      graphql-ws: 5.12.0(graphql@16.6.0)
+      glob-to-regexp: 0.4.1
+      graphql: 16.8.1
+      graphql-compose: 9.0.10(graphql@16.8.1)
+      graphql-ws: 5.14.1(graphql@16.8.1)
       helmet: 7.0.0
       icc: 3.0.0
       inquirer: 9.2.4
@@ -1448,6 +1451,8 @@ packages:
       openid-client: 5.4.2
       ora: 6.3.1
       otplib: 12.0.1
+      p-queue: 7.4.1
+      papaparse: 5.4.1
       pino: 8.14.1
       pino-http: 8.3.3
       pino-http-print: 3.1.0
@@ -1457,18 +1462,18 @@ packages:
       rollup: 3.22.0
       samlify: 2.8.10
       sanitize-html: 2.10.0
-      sharp: 0.32.5
+      sharp: 0.32.6
       snappy: 7.2.2
       stream-json: 1.7.5
       strip-bom-stream: 5.0.0
-      tmp-promise: 3.0.3
+      tinypool: 0.8.1
       tsx: 3.12.7
       uuid: 9.0.0
       uuid-validate: 0.0.3
       wellknown: 0.5.0
-      ws: 8.12.1
-      zod: 3.21.4
-      zod-validation-error: 1.0.1(zod@3.21.4)
+      ws: 8.14.2
+      zod: 3.22.4
+      zod-validation-error: 1.0.1(zod@3.22.4)
     optionalDependencies:
       '@keyv/redis': 2.5.8
       mysql: 2.18.1
@@ -1546,12 +1551,13 @@ packages:
       - utf-8-validate
       - vash
       - velocityjs
+      - vue
       - walrus
       - whiskers
     dev: false
 
-  /@directus/app@10.9.0:
-    resolution: {integrity: sha512-X1u5QRrexK2RvKIcqovdh0rLdDjRyvRIos4SgZ41z75gOMKtwWJKvJtFXP5B5c/isk84RvBbkQwAI9DudYeXrQ==}
+  /@directus/app@10.13.1:
+    resolution: {integrity: sha512-BMI3RO6XJjEFyHGBxP326ret1aQcgxYFkrJLO5kKwtsy8aAMpoUyQzLynSW4AwXZcTCs8fSluULnff4m/uqXBA==}
     dev: false
 
   /@directus/composables@10.1.2:
@@ -1567,11 +1573,13 @@ packages:
       - debug
     dev: true
 
-  /@directus/composables@10.1.3:
-    resolution: {integrity: sha512-9pLoCNpyBHvN8hV60bl46PeYy6jyXCbDQ4OhFyPla0xgdoMoB/4N11Ze+5OlN6lc+E/62klhpm+x47URdYRfbA==}
+  /@directus/composables@10.1.6(vue@3.3.4):
+    resolution: {integrity: sha512-RuhiLSidCD/SoTCxVU7td4geQEojajBUemCbHi0zxmWU23pNG9R1Vxiv8ksVK+PMLmnyx0GRLtBlTVkNStr0eA==}
+    peerDependencies:
+      vue: 3.3.4
     dependencies:
-      '@directus/constants': 10.2.3
-      '@directus/utils': 10.0.11
+      '@directus/constants': 11.0.1
+      '@directus/utils': 11.0.2(vue@3.3.4)
       axios: 1.4.0
       lodash-es: 4.17.21
       nanoid: 4.0.2
@@ -1584,9 +1592,19 @@ packages:
     resolution: {integrity: sha512-ygXWi0ptRjQ7qqUvRDXjFQ6ITXz1gOmjT/aQw06OmgaJPscbuHoc5BFzWn4l4nhapk0hkWYhq0xskfVeA5MMtQ==}
     dependencies:
       zod: 3.21.4
+    dev: true
 
-  /@directus/errors@0.0.2:
-    resolution: {integrity: sha512-f3F37jQjTdf3QfPOuRibTjV/M2rYjJEWPDIU6dsLdl1iF3p5WRhTaWYuSoJlD4IpQf9YtV8quGwVQcYBGcw/vw==}
+  /@directus/constants@11.0.1:
+    resolution: {integrity: sha512-/VulX3IJyXJHJKYh4VUrrYlIwBpjJdt1lRh9Y/4khyANbtq88gQuzLah1GLzG0yffRRipBkdWJd2EUo+oC/f1A==}
+    dependencies:
+      zod: 3.22.4
+    dev: false
+
+  /@directus/errors@0.2.0:
+    resolution: {integrity: sha512-PQmR4G7+dQ/ID6FatPL//o++J3FdjY/mc/p/EcaYsX+6DYVLyQSaJhA8/o55W0i8WRRinqrXy+K3IB0j3ZdU1A==}
+    dependencies:
+      '@directus/storage': 10.0.7
+      ms: 2.1.3
     dev: false
 
   /@directus/extensions-sdk@10.1.10(@types/node@20.6.5)(pg@8.11.0):
@@ -1596,7 +1614,7 @@ packages:
     dependencies:
       '@directus/composables': 10.1.2
       '@directus/constants': 10.2.3
-      '@directus/types': 10.1.6(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
+      '@directus/types': 10.1.6(pg@8.11.0)
       '@directus/utils': 10.0.10
       '@rollup/plugin-commonjs': 25.0.0(rollup@3.22.0)
       '@rollup/plugin-json': 6.0.0(rollup@3.22.0)
@@ -1635,15 +1653,16 @@ packages:
       - terser
     dev: true
 
-  /@directus/extensions-sdk@10.1.11(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0):
-    resolution: {integrity: sha512-94/8m7GC6qi6si7kTWP0v6A/sEquE/cXBMwT/hb28/X05dAKz3EZF8O6TcDCuQvi6rK7VsoxKYdbPSBFrmWfXw==}
+  /@directus/extensions-sdk@10.2.0(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0):
+    resolution: {integrity: sha512-4barSzaQskAOig/D3J7N4XmT8heZVa6exBRUeWS2fPClIVWcTERz9Ih6gzrg9g4JBms8H0Pj7tcE+0fbynLwlA==}
     engines: {node: '>=12.20.0'}
     hasBin: true
     dependencies:
-      '@directus/composables': 10.1.3
-      '@directus/constants': 10.2.3
-      '@directus/types': 10.1.6(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
-      '@directus/utils': 10.0.11
+      '@directus/composables': 10.1.6(vue@3.3.4)
+      '@directus/constants': 11.0.1
+      '@directus/extensions': 0.2.0(vue@3.3.4)
+      '@directus/types': 11.0.2(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
+      '@directus/utils': 11.0.2(vue@3.3.4)
       '@rollup/plugin-commonjs': 25.0.0(rollup@3.22.0)
       '@rollup/plugin-json': 6.0.0(rollup@3.22.0)
       '@rollup/plugin-node-resolve': 15.0.2(rollup@3.22.0)
@@ -1681,18 +1700,32 @@ packages:
       - terser
     dev: false
 
-  /@directus/format-title@10.0.0:
-    resolution: {integrity: sha512-iMXP8yQb0UKAMGRHAY7IkNXEGdUqQDvlu1aAkPARYah4lMhEU8E5KgkXdOCPQaxt6Wy0gXb7DPMjeSlKyBKCxg==}
+  /@directus/extensions@0.2.0(vue@3.3.4):
+    resolution: {integrity: sha512-F5YCqF1i+FJMLdC6Do6gBndMnx4pvQFTFSDxO20kmkTBsL0mKt5CsaIN68l3mu0odOPJK23k7uQMPTVa68hbJQ==}
+    dependencies:
+      '@directus/utils': 11.0.2(vue@3.3.4)
+      fs-extra: 11.1.1
+      lodash-es: 4.17.21
+      tmp: 0.2.1
+      zod: 3.22.4
+    transitivePeerDependencies:
+      - vue
+    dev: false
+
+  /@directus/format-title@10.1.0:
+    resolution: {integrity: sha512-5TmkYfDCKPh/Xy9qYiVO4y6bxPIAFb8dnBn4RgXBQyndffq9GVuCX66FdxdjGqn+ti2t4yuQOGZ+E9a/GjmWcw==}
     engines: {node: '>=6.0.0'}
     dev: false
 
-  /@directus/pressure@1.0.10:
-    resolution: {integrity: sha512-rumPf0IPV6lpqjvQNvwdk0uxp2oojGMCgpPpdQ5hdXwldxiBmJsAyfZ3RIPFtlAzfKtPm1CuEAVHzo26LvUTDw==}
+  /@directus/pressure@1.0.13(vue@3.3.4):
+    resolution: {integrity: sha512-b2odJ2Hhc8gV5jtdTa5hj18HDP0gdpLuk48Y1ZP/gcf5yQxtY/K5wEtAFH3I2KWpMmtygeF4xHKiteGJKhGWlw==}
     dependencies:
-      '@directus/utils': 10.0.11
+      '@directus/utils': 11.0.2(vue@3.3.4)
+    transitivePeerDependencies:
+      - vue
     dev: false
 
-  /@directus/schema@10.0.2(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0):
+  /@directus/schema@10.0.2(pg@8.11.0):
     resolution: {integrity: sha512-9WSdceZN5Z6tZtHFZ8GbMqGWpTBnO+56lkhYECV9dO1JW1X/rF4d7HNBJCivN8OL+4GZIZN6ChrdQyUqycSwrA==}
     dependencies:
       knex: 2.4.2(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
@@ -1705,84 +1738,108 @@ packages:
       - sqlite3
       - supports-color
       - tedious
+    dev: true
 
-  /@directus/specs@10.2.0:
-    resolution: {integrity: sha512-NbaL2LpMKlplTkxuEk4xhGd2v+ThkN4peJaUjP2UuVCyvDds5un20pppKxqJfEFrkrBaRm2o/2qUW1itiOg15w==}
+  /@directus/schema@11.0.0(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0):
+    resolution: {integrity: sha512-4YkutVuMr62nRZeoWylExOlC6l0TxmB1hQ4ZaNgKe5j4CWHX/lO2xrTc2BuA4QBdSgTp/qOdCdIbMXTkedou7Q==}
+    dependencies:
+      knex: 2.4.2(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
+    transitivePeerDependencies:
+      - better-sqlite3
+      - mysql
+      - mysql2
+      - pg
+      - pg-native
+      - sqlite3
+      - supports-color
+      - tedious
+    dev: false
+
+  /@directus/specs@10.2.3:
+    resolution: {integrity: sha512-Snqses8X8MNOigYaJsHyaxVLNuGLi68pJ8c0R6VbqHuB348LFDPwMwmycD6nLvT7ZjeZhYIKVHb2IJqpa2D6mg==}
     dependencies:
       openapi3-ts: 4.1.2
     dev: false
 
-  /@directus/storage-driver-azure@10.0.11:
-    resolution: {integrity: sha512-he7mjoIYJCTQc5L1sXZMChVTrzDOvicGX9C/IvX7LK9fa3xcSSkhuVSJTnndNrubOLfy6B+HqfB2oxwKgfhoqA==}
+  /@directus/storage-driver-azure@10.0.14(vue@3.3.4):
+    resolution: {integrity: sha512-rfICFdIfRSYEIPL/nWKx1X+U7yJoFFf2Eh/ZBEwx0jkdiPZq32M+5aFqzDsdq4YXsYziEuZzbhihb+WbZy/0CA==}
     dependencies:
       '@azure/storage-blob': 12.14.0
-      '@directus/storage': 10.0.5
-      '@directus/utils': 10.0.11
+      '@directus/storage': 10.0.7
+      '@directus/utils': 11.0.2(vue@3.3.4)
     transitivePeerDependencies:
       - encoding
+      - vue
     dev: false
 
-  /@directus/storage-driver-cloudinary@10.0.11:
-    resolution: {integrity: sha512-XBV99su5PdNca/glQsJacB56OK8JCfVoGBYxeuvR/RPHYcD6e0vZxZITu/KFKQp66lgglqvuyVty0Ew0opd1ZA==}
+  /@directus/storage-driver-cloudinary@10.0.14(vue@3.3.4):
+    resolution: {integrity: sha512-Ka07KizzykdPoveTUmfbs3zWSDKyU7m08AWGywGMOQ7Z+hz2wXFINaTgB6l0ct4wqFLNI1cYVulaibI5rx3DAQ==}
     dependencies:
-      '@directus/storage': 10.0.5
-      '@directus/utils': 10.0.11
+      '@directus/storage': 10.0.7
+      '@directus/utils': 11.0.2(vue@3.3.4)
       p-queue: 7.3.4
       undici: 5.22.1
+    transitivePeerDependencies:
+      - vue
     dev: false
 
-  /@directus/storage-driver-gcs@10.0.11:
-    resolution: {integrity: sha512-lGJwSX3MQ3LIiEpd/93xCrEAV48MJQSucjtF8QF2gEFm3gJXfFt0TNiA1hcVUQKPylb8HurPpg0vzYRb2pVxdw==}
+  /@directus/storage-driver-gcs@10.0.14(vue@3.3.4):
+    resolution: {integrity: sha512-Bi+Uv9adiiECFiUclDWKVt8GHyozQw3EhNadaAArQA3lXJ3dzbeLfsJeHMaG8cl18TGD1k3zpGr87H4iUjxKfQ==}
     dependencies:
-      '@directus/storage': 10.0.5
-      '@directus/utils': 10.0.11
+      '@directus/storage': 10.0.7
+      '@directus/utils': 11.0.2(vue@3.3.4)
       '@google-cloud/storage': 6.10.1
     transitivePeerDependencies:
       - encoding
       - supports-color
+      - vue
     dev: false
 
-  /@directus/storage-driver-local@10.0.11:
-    resolution: {integrity: sha512-J08LtjFDGiyEZlSrZ5zEuCrdnJ8cEmHh6RoetdG4EtDhzOmNVyVN1H694XtNzJ4sr73b4dSTBg2NK9ApXisr0A==}
+  /@directus/storage-driver-local@10.0.14(vue@3.3.4):
+    resolution: {integrity: sha512-+a7aRhucZQaaxMbDHra68revHICXUXGLJ/T4fcFjDtmnLEsE/v6sdXLPNZvSfcjUmqLiAOGPtydR+UBBRrZoFg==}
     dependencies:
-      '@directus/storage': 10.0.5
-      '@directus/utils': 10.0.11
+      '@directus/storage': 10.0.7
+      '@directus/utils': 11.0.2(vue@3.3.4)
+    transitivePeerDependencies:
+      - vue
     dev: false
 
-  /@directus/storage-driver-s3@10.0.11:
-    resolution: {integrity: sha512-Y0dw4AfS6vzWxG3FY2Muyxv3oava4POceSbTqE/M+oUF5jJxvNqUYanP/klo57id6h4ZzIiwF+N+bO2D2vMLHA==}
+  /@directus/storage-driver-s3@10.0.14(vue@3.3.4):
+    resolution: {integrity: sha512-8Ik7u3zGWrdfoosJ9zxxtRmeJYvgDyFnSOYi2Qvde0gxhI6pseKDPHknqB0cuxUQJ11hyiVlHtzM6a2gSyDsIw==}
     dependencies:
       '@aws-sdk/abort-controller': 3.329.0
       '@aws-sdk/client-s3': 3.332.0
       '@aws-sdk/lib-storage': 3.332.0(@aws-sdk/abort-controller@3.329.0)(@aws-sdk/client-s3@3.332.0)
       '@aws-sdk/node-http-handler': 3.344.0
-      '@directus/storage': 10.0.5
-      '@directus/utils': 10.0.11
+      '@directus/storage': 10.0.7
+      '@directus/utils': 11.0.2(vue@3.3.4)
     transitivePeerDependencies:
       - '@aws-sdk/signature-v4-crt'
       - aws-crt
+      - vue
     dev: false
 
-  /@directus/storage-driver-supabase@1.0.3:
-    resolution: {integrity: sha512-pqglZbTPdjOnLaQA3IzkcnNntcHqKELgVphdhp5cC8XNnITEEDt0n3EK1V+m0XDj6b8eAbiMpZ5VEOx8D9ce3g==}
+  /@directus/storage-driver-supabase@1.0.6(vue@3.3.4):
+    resolution: {integrity: sha512-fwi3hB1O5XotgO5nLGmjGPDXRz3jnCcMhW9hrAvrO04qhAuCp4scmK07FG6jbrNn/oBTpjh0omDuE6kNn8+mkg==}
     dependencies:
-      '@directus/storage': 10.0.5
-      '@directus/utils': 10.0.11
+      '@directus/storage': 10.0.7
+      '@directus/utils': 11.0.2(vue@3.3.4)
       '@supabase/storage-js': 2.5.1
       undici: 5.22.1
     transitivePeerDependencies:
       - encoding
+      - vue
     dev: false
 
-  /@directus/storage@10.0.5:
-    resolution: {integrity: sha512-Q2QTLES809ZbAqqWuQiMmFfEhlhecj3kqyRucD0f2psfjsr5gE6VaNBG9XWPldOh2VXw9eZTgmaACEY4Ne2F+w==}
+  /@directus/storage@10.0.7:
+    resolution: {integrity: sha512-dS3NjnQGR42XfgdprxMVUnoGO55F2jfVoshXFt7j56TDHirGODdogvypKbGm+1OM3VTD+s84GSXfh7RjtlLJHg==}
     dev: false
 
-  /@directus/types@10.1.6(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0):
+  /@directus/types@10.1.6(pg@8.11.0):
     resolution: {integrity: sha512-exQVNLETkydVOnoSbDZe+awo+9uk+Za+r7EvkQOlv3VHXv5F2gHQdR265FrG3y6kDNvTNDG2kttOrseZI2DAtg==}
     dependencies:
       '@directus/constants': 10.2.3
-      '@directus/schema': 10.0.2(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
+      '@directus/schema': 10.0.2(pg@8.11.0)
       '@types/express': 4.17.17
       '@types/geojson': 7946.0.10
       express: 4.18.2
@@ -1801,6 +1858,32 @@ packages:
       - sqlite3
       - supports-color
       - tedious
+    dev: true
+
+  /@directus/types@11.0.2(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0):
+    resolution: {integrity: sha512-vr42KGJtWxQbPxeEmXXYhQNc9W/5WHV9nKY1A3bSuOZoLS3l3HLBcQPmXa9JDqvfm8gLB6dvWT8zU9mPgqt5JA==}
+    dependencies:
+      '@directus/constants': 11.0.1
+      '@directus/schema': 11.0.0(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
+      '@types/express': 4.17.17
+      '@types/geojson': 7946.0.10
+      express: 4.18.2
+      geojson: 0.5.0
+      knex: 2.4.2(mysql@2.18.1)(pg@8.11.0)(sqlite3@5.1.6)(tedious@16.1.0)
+      pino: 8.14.1
+      vue: 3.3.4
+      vue-router: 4.2.0(vue@3.3.4)
+      zod: 3.22.4
+    transitivePeerDependencies:
+      - better-sqlite3
+      - mysql
+      - mysql2
+      - pg
+      - pg-native
+      - sqlite3
+      - supports-color
+      - tedious
+    dev: false
 
   /@directus/update-check@11.0.3:
     resolution: {integrity: sha512-OKPrPWKice1bu0oD/ooDn8noiwIFULMVkoLoYDeq8b+Lx8qB87VL3agI/OX5AlSVyIhr7fdpwO47dHblXYMQjw==}
@@ -1826,10 +1909,15 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /@directus/utils@10.0.11:
-    resolution: {integrity: sha512-wBVSDfeKG6pNteobtGK/qWHej3Px35z3duR4bxL14zhbK5YGvUIyzIoAE3+TPVjc1sT4Q4wuGdwOgxao4xLkAA==}
+  /@directus/utils@11.0.2(vue@3.3.4):
+    resolution: {integrity: sha512-GXcMgZI61bQYeJlXyDC8gkZhXwFSZg7b5nbXfKR8MvhwK2w4jGkV7ybQUxKUsWsKxait0ixuxxgAoZrfqbHfYg==}
+    peerDependencies:
+      vue: 3.3.4
+    peerDependenciesMeta:
+      vue:
+        optional: true
     dependencies:
-      '@directus/constants': 10.2.3
+      '@directus/constants': 11.0.1
       date-fns: 2.30.0
       fs-extra: 11.1.1
       joi: 17.9.2
@@ -1839,12 +1927,14 @@ packages:
       vue: 3.3.4
     dev: false
 
-  /@directus/validation@0.0.6:
-    resolution: {integrity: sha512-Z0/rCV/5pa3FxMBI4qpoW3svoKNXshshYIo22d0sHBsgSS0a7gPC6m3soe74E1NuvCpyCD2fmysaFKFTSiJxaA==}
+  /@directus/validation@0.0.9(vue@3.3.4):
+    resolution: {integrity: sha512-YwiSE7HmFUb9hUycXzv+rCrInjKXRQ11uLCusiOrfm5YUgmkyufD5i5EB5tEmxfaectfGg0qC9vHb7VDgH9eig==}
     dependencies:
-      '@directus/errors': 0.0.2
-      '@directus/utils': 10.0.11
+      '@directus/errors': 0.2.0
+      '@directus/utils': 11.0.2(vue@3.3.4)
       joi: 17.9.2
+    transitivePeerDependencies:
+      - vue
     dev: false
 
   /@esbuild-kit/cjs-loader@2.4.4:
@@ -3108,14 +3198,14 @@ packages:
       readable-stream: 3.6.2
     optional: true
 
-  /argon2@0.30.3:
-    resolution: {integrity: sha512-DoH/kv8c9127ueJSBxAVJXinW9+EuPA3EMUxoV2sAY1qDE5H9BjTyVF/aD2XyHqbqUWabgBkIfcP3ZZuGhbJdg==}
+  /argon2@0.31.1:
+    resolution: {integrity: sha512-ik2xnJrLXazya7m4Nz1XfBSRjXj8Koq8qF9PsQC8059p20ifWc9zx/hgU3ItZh/3TnwXkv0RbhvjodPkmFf0bg==}
     engines: {node: '>=14.0.0'}
     requiresBuild: true
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11
       '@phc/format': 1.0.0
-      node-addon-api: 5.1.0
+      node-addon-api: 7.0.0
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -4023,14 +4113,6 @@ packages:
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
 
-  /csv-parser@3.0.0:
-    resolution: {integrity: sha512-s6OYSXAK3IdKqYO33y09jhypG/bSDHPuyCme/IdEHfWpLf/jKcpitVFyOC6UemgGk8v7Q5u2XE0vvwmanxhGlQ==}
-    engines: {node: '>= 10'}
-    hasBin: true
-    dependencies:
-      minimist: 1.2.8
-    dev: false
-
   /dashdash@1.14.1:
     resolution: {integrity: sha512-jRFi8UDGo6j+odZiEpjazZaWqEal3w/basFjQHQEwVtZJGDpxbH1MeYluwCS8Xq5wmLJooDlMgvVarmWfGM44g==}
     engines: {node: '>=0.10'}
@@ -4160,8 +4242,8 @@ packages:
     resolution: {integrity: sha512-UX6sGumvvqSaXgdKGUsgZWqcUyIXZ/vZTrlRT/iobiKhGL0zL4d3osHj3uqllWJK+i+sixDS/3COVEOFbupFyw==}
     engines: {node: '>=8'}
 
-  /directus-extension-api-docs@1.7.2(express@4.18.2):
-    resolution: {integrity: sha512-CyulfBDUzKyA8gGabEJirrJTZpzH+qTjyBA8eHBlWQh/hCBhHn7j9yL2AIb4q8/hPKRraSLX/442raz4XhLkXw==}
+  /directus-extension-api-docs@1.7.5(express@4.18.2):
+    resolution: {integrity: sha512-gQoEdazuQmQl/STjTxnOuZwpf+Sb0nmZcK/hkQiPqH9lWTGoQOtvia7HWXRJr49DrFdEucOtXhgw5YBTzPvwYA==}
     dependencies:
       '@pnpm/find-workspace-dir': 5.0.1
       express-openapi-validator: 4.13.8
@@ -4175,12 +4257,12 @@ packages:
     resolution: {integrity: sha512-k2JQaCxjbLPOSyh084hPSVpxpVLB1/oKe+ztPmXaeDOlPoHv7CdOZyYWTkoLmI7gcUBRJjBtYgMJHsTMTd9QcA==}
     dev: false
 
-  /directus@10.6.3:
-    resolution: {integrity: sha512-uBXCTLe3LLLYP8ea91sb7w27Yt8bIjMQpTm48LHwryW6G0xtu2EJGndqrTI6rupS2dxCAhBmdnGVpoCRF3xgZQ==}
+  /directus@10.8.1(vue@3.3.4):
+    resolution: {integrity: sha512-8nazk6dSYLl6BLIdJ+p0hR9FY4u8CdUkN97EN4rXVN0HHxRw1dxqeOk04hxWKkzWYBsUoNLkPEenbnRIRYNzJg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
-      '@directus/api': 13.1.1
+      '@directus/api': 14.1.1(vue@3.3.4)
       '@directus/update-check': 11.0.3
     transitivePeerDependencies:
       - '@aws-sdk/signature-v4-crt'
@@ -4251,6 +4333,7 @@ packages:
       - utf-8-validate
       - vash
       - velocityjs
+      - vue
       - walrus
       - whiskers
     dev: false
@@ -4564,6 +4647,10 @@ packages:
 
   /eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
+
+  /eventemitter3@5.0.1:
+    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
+    dev: false
 
   /events@3.3.0:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
@@ -5003,6 +5090,10 @@ packages:
     dependencies:
       is-glob: 4.0.3
 
+  /glob-to-regexp@0.4.1:
+    resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
+    dev: false
+
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
     dependencies:
@@ -5080,34 +5171,34 @@ packages:
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  /graphql-compose@9.0.10(graphql@16.6.0):
+  /graphql-compose@9.0.10(graphql@16.8.1):
     resolution: {integrity: sha512-UsVoxfi2+c8WbHl2pEB+teoRRZoY4mbWBoijeLDGpAZBSPChnqtSRjp+T9UcouLCwGr5ooNyOQLoI3OVzU1bPQ==}
     peerDependencies:
       graphql: ^14.2.0 || ^15.0.0 || ^16.0.0
     dependencies:
-      graphql: 16.6.0
-      graphql-type-json: 0.3.2(graphql@16.6.0)
+      graphql: 16.8.1
+      graphql-type-json: 0.3.2(graphql@16.8.1)
     dev: false
 
-  /graphql-type-json@0.3.2(graphql@16.6.0):
+  /graphql-type-json@0.3.2(graphql@16.8.1):
     resolution: {integrity: sha512-J+vjof74oMlCWXSvt0DOf2APEdZOCdubEvGDUAlqH//VBYcOYsGgRW7Xzorr44LvkjiuvecWc8fChxuZZbChtg==}
     peerDependencies:
       graphql: '>=0.8.0'
     dependencies:
-      graphql: 16.6.0
+      graphql: 16.8.1
     dev: false
 
-  /graphql-ws@5.12.0(graphql@16.6.0):
-    resolution: {integrity: sha512-PA3ImUp8utrpEjoxBMhvxsjkStvFEdU0E1gEBREt8HZIWkxOUymwJBhFnBL7t/iHhUq1GVPeZevPinkZFENxTw==}
+  /graphql-ws@5.14.1(graphql@16.8.1):
+    resolution: {integrity: sha512-aqkls1espsygP1PfkAuuLIV96IbztQ6EaADse97pw8wRIMT3+AL/OYfS8V2iCRkc0gzckitoDRGCQEdnySggiA==}
     engines: {node: '>=10'}
     peerDependencies:
       graphql: '>=0.11 <=16'
     dependencies:
-      graphql: 16.6.0
+      graphql: 16.8.1
     dev: false
 
-  /graphql@16.6.0:
-    resolution: {integrity: sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==}
+  /graphql@16.8.1:
+    resolution: {integrity: sha512-59LZHPdGZVh695Ud9lRzPBVTtlX9ZCV150Er2W43ro37wVof0ctenSaskPPjN7lVTIN8mSZt8PHUNKZuNQUuxw==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
     dev: false
 
@@ -6231,12 +6322,12 @@ packages:
   /node-addon-api@4.3.0:
     resolution: {integrity: sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==}
 
-  /node-addon-api@5.1.0:
-    resolution: {integrity: sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==}
-    dev: false
-
   /node-addon-api@6.1.0:
     resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
+    dev: false
+
+  /node-addon-api@7.0.0:
+    resolution: {integrity: sha512-vgbBJTS4m5/KkE16t5Ly0WW9hz46swAstv0hYYwMtbG7AznRhNyfLRe8HZAiWIpcHzoO7HxhLuBQj9rJ/Ho0ZA==}
     dev: false
 
   /node-fetch@2.7.0:
@@ -6651,6 +6742,14 @@ packages:
       p-timeout: 5.1.0
     dev: false
 
+  /p-queue@7.4.1:
+    resolution: {integrity: sha512-vRpMXmIkYF2/1hLBKisKeVYJZ8S2tZ0zEAmIJgdVKP2nq0nh4qCdf8bgw+ZgKrkh71AOCaqzwbJJk1WtdcF3VA==}
+    engines: {node: '>=12'}
+    dependencies:
+      eventemitter3: 5.0.1
+      p-timeout: 5.1.0
+    dev: false
+
   /p-timeout@3.2.0:
     resolution: {integrity: sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==}
     engines: {node: '>=8'}
@@ -6667,6 +6766,10 @@ packages:
 
   /pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
+    dev: false
+
+  /papaparse@5.4.1:
+    resolution: {integrity: sha512-HipMsgJkZu8br23pW15uvo6sib6wne/4woLZPlFf3rpDyMe9ywEXUsuD7+6K9PRkJlVT51j/sCOYDKGGS3ZJrw==}
     dev: false
 
   /parent-module@1.0.1:
@@ -7788,8 +7891,8 @@ packages:
   /setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  /sharp@0.32.5:
-    resolution: {integrity: sha512-0dap3iysgDkNaPOaOL4X/0akdu0ma62GcdC2NBQ+93eqpePdDdr2/LM0sFdDSMmN7yS+odyZtPsb7tx/cYBKnQ==}
+  /sharp@0.32.6:
+    resolution: {integrity: sha512-KyLTWwgcR9Oe4d9HwCwNM2l7+J0dUQwn/yf7S0EnTtb0eVS4RxO0eUSvxPtzT4F3SY+C4K6fqdv/DO27sJ/v/w==}
     engines: {node: '>=14.15.0'}
     requiresBuild: true
     dependencies:
@@ -8328,10 +8431,9 @@ packages:
     resolution: {integrity: sha512-Cc+OraorugtXNfs50hU9KS369rFXCfgGLpfCfvlc+Ud5u6VWmUQsOAa9HbTvheQdYnrdJqqv1e5oIqXppMYnSw==}
     engines: {node: '>=8'}
 
-  /tmp-promise@3.0.3:
-    resolution: {integrity: sha512-RwM7MoPojPxsOBYnyd2hy0bxtIlVrihNs9pj5SUvY8Zz1sQcQG2tG1hSr8PDxfgEB8RNKDhqbIlroIarSNDNsQ==}
-    dependencies:
-      tmp: 0.2.1
+  /tinypool@0.8.1:
+    resolution: {integrity: sha512-zBTCK0cCgRROxvs9c0CGK838sPkeokNGdQVUUwHAbynHFlmyJYj825f/oRs528HaIJ97lo0pLIlDUzwN+IorWg==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /tmp@0.0.33:
@@ -8722,8 +8824,8 @@ packages:
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  /ws@8.12.1:
-    resolution: {integrity: sha512-1qo+M9Ba+xNhPB+YTWUlK6M17brTut5EXbcBaMRN5pH5dFrXz7lzz1ChFSUq3bOUl8yEvSenhHmYUNJxFzdJew==}
+  /ws@8.14.2:
+    resolution: {integrity: sha512-wEBG1ftX4jcglPxgFCMJmZ2PLtSbJ2Peg6TmpJFTbe9GZYOQCDPdMYu/Tm0/bGZkw8paZnJY45J4K2PZrLYq8g==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -8795,14 +8897,19 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
-  /zod-validation-error@1.0.1(zod@3.21.4):
+  /zod-validation-error@1.0.1(zod@3.22.4):
     resolution: {integrity: sha512-QRk2AtHLJg8sCZAbEjXSs7E0n4/mSdX5caoh6eOUvDSdcIQz03i0xoNN1Qx6UZT+ADVHRK6+ZXRtldzW6nnltA==}
     engines: {node: ^14.17 || >=16.0.0}
     peerDependencies:
       zod: ^3.18.0
     dependencies:
-      zod: 3.21.4
+      zod: 3.22.4
     dev: false
 
   /zod@3.21.4:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
+    dev: true
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false
