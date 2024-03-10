@@ -7,3 +7,4 @@ backup/extensions.tar.gz
 backup/uploads.tar.gz
 backup_local
 directus-migrator.config.js
+extensions/.registry/

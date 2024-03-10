@@ -1,0 +1,16 @@
+{
+  "name": "directus-extension-generate-types",
+  "version": "0.5.1",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-custom-module"
+  ],
+  "directus:extension": {
+    "type": "module",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^9.0.0-rc.95",
+    "hidden": false
+  }
+}
