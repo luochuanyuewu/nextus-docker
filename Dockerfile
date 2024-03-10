@@ -1,10 +1,9 @@
-ARG DOCKER_DIRECTUS_VERSION=10.8.1
+ARG DOCKER_DIRECTUS_VERSION=10.9.3
 
 FROM directus/directus:${DOCKER_DIRECTUS_VERSION}
 
 USER root
-RUN corepack enable \
-    && corepack prepare pnpm@8.3.1 --activate
+RUN corepack enable 
 
 USER node
 
