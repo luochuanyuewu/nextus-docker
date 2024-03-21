@@ -14,7 +14,7 @@ services:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
-      - 5432:5432
+      - "5432:5432"
 
   cache:
     container_name: ${DOCKER_DIRECTUS_REDIS_CONTAINER_NAME}
@@ -22,7 +22,7 @@ services:
     networks:
       - directus
     ports:
-      - 6379:6379
+      - "6379:6379"
 
 networks:
   directus:
