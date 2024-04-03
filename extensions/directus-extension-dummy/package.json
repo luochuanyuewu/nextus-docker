@@ -1,7 +1,16 @@
 {
   "name": "directus-extension-dummy",
+  "description": "Please enter a description for your extension",
   "version": "1.0.0",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-custom-bundle"
+  ],
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "directus:extension": {
     "host": "^10.1.10",
     "type": "bundle",
@@ -19,16 +28,14 @@
         "type": "endpoint",
         "name": "endpoint",
         "source": "src/endpoint/index.ts"
+      },
+      {
+        "type": "hook",
+        "name": "hook",
+        "source": "src/hook/index.ts"
       }
     ]
   },
-  "description": "Please enter a description for your extension",
-  "icon": "extension",
-  "keywords": [
-    "directus",
-    "directus-extension",
-    "directus-custom-bundle"
-  ],
   "scripts": {
     "build": "directus-extension build",
     "dev": "directus-extension build -w --no-minify",
@@ -36,9 +43,12 @@
     "add": "directus-extension add"
   },
   "devDependencies": {
+    "@directus/errors": "^0.2.4",
     "@directus/extensions-sdk": "11.0.1",
-    "@types/node": "^20.11.25",
-    "typescript": "^5.4.2",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "express": "^4.19.1",
+    "typescript": "^5.4.3",
     "vue": "^3.4.21"
   }
 }

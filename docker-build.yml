@@ -22,6 +22,7 @@ services:
       # If you want to load extensions from the host
       - ${DOCKER_DIRECTUS_EXTENSIONS}:/directus/extensions
       - ${DOCKER_DIRECTUS_SNAPSHOTS}:/directus/snapshots
+      - ./schema-sync:/directus/schema-sync
       - ./scripts:/directus/scripts
       - ./startup.sh:/directus/startup.sh
     networks:

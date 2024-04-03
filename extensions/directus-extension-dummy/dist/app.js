@@ -1,1 +1,40 @@
-import{defineModule as o}from"@directus/extensions-sdk";import{defineComponent as t,resolveComponent as e,openBlock as n,createBlock as r,withCtx as s,createTextVNode as u}from"vue";const c=[],i=[],m=[],d=[o({id:"custom",name:"Custom",icon:"box",routes:[{path:"",component:((o,t)=>{const e=o.__vccOpts||o;for(const[o,n]of t)e[o]=n;return e})(t({}),[["render",function(o,t,c,i,m,d){const f=e("private-view");return n(),r(f,{title:"My Custom Module"},{default:s((()=>[u("Content goes here...")])),_:1})}],["__file","module.vue"]])}]})],f=[],p=[],l=[];export{i as displays,c as interfaces,m as layouts,d as modules,l as operations,f as panels,p as themes};
+import { defineModule } from '@directus/extensions-sdk';
+import { defineComponent, resolveComponent, openBlock, createBlock, withCtx, createTextVNode } from 'vue';
+
+var _sfc_main = defineComponent({});
+
+var _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_private_view = resolveComponent("private-view");
+  return openBlock(), createBlock(_component_private_view, { title: "My Custom Module" }, {
+    default: withCtx(() => [
+      createTextVNode("Content goes here... \u4E48\u4E48\u54D2")
+    ]),
+    _: 1
+    /* STABLE */
+  });
+}
+var ModuleComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "module.vue"]]);
+
+var e0 = defineModule({
+  id: "custom",
+  name: "Custom",
+  icon: "box",
+  routes: [
+    {
+      path: "",
+      component: ModuleComponent
+    }
+  ]
+});
+
+const interfaces = [];const displays = [];const layouts = [];const modules = [e0];const panels = [];const themes = [];const operations = [];
+
+export { displays, interfaces, layouts, modules, operations, panels, themes };
